@@ -29,4 +29,15 @@ class HighOrderFunctionTest extends AnyFunSuiteLike:
     assert((1 to 6).map(square) === List(1, 4, 9, 16, 25, 36))
   }
 
+  /*
+     Use anonymous functions instead!
+     Replace each ??? in order to have anonymous functions in the calls.
+  */
 
+  test("isOdd") {
+    assert(( 1 to 15 ).filter( ??? ) === List(1, 3, 5, 7, 9, 11, 13, 15))
+  }
+
+  test("square") {
+    assert(( 1 to 6 ).map( ??? ) === List( 1, 4, 9, 16, 25, 36))
+  }
