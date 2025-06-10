@@ -33,16 +33,16 @@ areaf
 def abs(x: Int) = if (x >= 0) x else -x
 abs(-1)
 
-// Exercise 1
-
 /*
+  Exercise 1
   Write a function lessThan with two arguments that returns true with the first argument is less
   than the second one, otherwise it should return false. Is it necessary to use a conditional
   expression if-else?
 */
 
-// Exercise 2
+
 /*
+  Exercise 2
   Without using || and &&, write the following functions
   - and
   - or
@@ -51,9 +51,9 @@ abs(-1)
   - or(x, y) == x || y.
 */
 
-def and(b1: Boolean, b2: Boolean): Boolean = ???
+def and(x: Boolean, y: Boolean): Boolean = ???
 
-def or(b1: Boolean, b2: Boolean): Boolean = ???
+def or(x: Boolean, y: Boolean): Boolean = ???
 
 assert(and(true, true)==true)
 assert(and(true, false)==false)
@@ -65,6 +65,49 @@ assert(or(true, false)==true)
 assert(or(false, true)==true)
 println("tests passed")
 
-// Factorial
+// Recursion
 def factorial(n: Long): Long =
   if (n == 0) 1 else n * factorial(n - 1)
+
+/*
+   Exercise 3
+   Write a recursive function sumDown that sum all values between the value received and zero
+*/
+
+def sumDown(x: Int): Int = ???
+
+assert(sumDown(5) == 15)
+println("tests passed")
+
+/*
+   Exercise 4
+   Write a recursive function nSymbol with two arguments:
+   the first one indicates the number of times that the symbol (the second argument) should be returned.
+*/
+
+def nSymbol(i: Int, c: Char) : String = ???
+
+// Test
+assert(nSymbol(5,'*') == "*****")
+
+/*
+   Exercise 5
+   Write a recursive function mult with two arguments that returns the multiplication of the two values.
+   The multiplication is to be computed using sums. For instance, 4 * 3 = 4+ 4 +4 = 3 + 3 + 3 + 3
+*/
+def mult(x: Int, y: Int): Int = ???
+
+assert(mult(4,3) == 12)
+assert(mult(0,0) == 0)
+assert(mult(0,1) == 0)
+assert(mult(1,0) == 0)
+assert(mult(-3,-3) == 9)
+assert(mult(-3,4) == -12)
+assert(mult(3, -4) == -12)
+
+// Tail Recursion
+
+/*
+  Provide solutions for the three previous exercises using tail recursion.
+  First, think about a proper signature for the functions.
+*/

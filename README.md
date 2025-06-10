@@ -9,4 +9,4 @@ Base project for scala training
 
 # Guide
 
-Go to worksheet, play around and solve exercise 1.
+Follow the worksheet.
