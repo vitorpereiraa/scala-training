@@ -36,11 +36,19 @@ abs(-1)
 // Exercise 1
 
 /*
-  Without using || and &&, write functions
+  Write a function lessThan with two arguments that returns true with the first argument is less
+  than the second one, otherwise it should return false. Is it necessary to use a conditional
+  expression if-else?
+*/
+
+// Exercise 2
+/*
+  Without using || and &&, write the following functions
   - and
   - or
-  such that for all argument expressions x and y,
-  and(x, y) == x && y and or(x, y) == x || y.
+  such that for all argument x and y,
+  - and(x, y) == x && y
+  - or(x, y) == x || y.
 */
 
 def and(b1: Boolean, b2: Boolean): Boolean = ???
@@ -57,3 +65,6 @@ assert(or(true, false)==true)
 assert(or(false, true)==true)
 println("tests passed")
 
+// Factorial
+def factorial(n: Long): Long =
+  if (n == 0) 1 else n * factorial(n - 1)
