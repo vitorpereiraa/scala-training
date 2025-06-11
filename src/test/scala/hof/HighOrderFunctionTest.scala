@@ -34,10 +34,10 @@ class HighOrderFunctionTest extends AnyFunSuiteLike:
      Replace each ??? in order to have anonymous functions in the calls.
   */
 
-  test("isOdd") {
+  test("anonymIsOdd") {
     assert(( 1 to 15 ).filter( ??? ) === List(1, 3, 5, 7, 9, 11, 13, 15))
   }
 
-  test("square") {
+  test("anonymSquare") {
     assert(( 1 to 6 ).map( ??? ) === List( 1, 4, 9, 16, 25, 36))
   }
