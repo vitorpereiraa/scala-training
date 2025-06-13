@@ -5,11 +5,11 @@ import org.scalatest.funsuite.AnyFunSuiteLike
 import java.time.LocalTime
 import java.time.format.DateTimeFormatter
 
-class CurriedLogMsgTest extends AnyFunSuiteLike {
+class CurriedLogMsgTest extends AnyFunSuiteLike:
 
-  def getTimestampStr: String = {
+  def getTimestampStr: String =
     LocalTime.now().format(DateTimeFormatter.ofPattern("HH:mm:ss"))
-  }
+
 
   test("testLogMessagePartialFunctionCall") {
     val logMsgFun: (String, String) => String = ???
@@ -28,7 +28,3 @@ class CurriedLogMsgTest extends AnyFunSuiteLike {
 
     assert(logMsg == s"[$timestamp] [INFO] [MyApp] - Application is starting up.")
   }
-
-
-
-}
