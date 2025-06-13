@@ -12,7 +12,7 @@ class CurriedLogMsgTest extends AnyFunSuiteLike {
   }
 
   test("testLogMessagePartialFunctionCall") {
-    val logMsgFun: (String, String) => String = ??? // partial call
+    val logMsgFun: (String, String) => String = ???
 
     val timestamp_1 = getTimestampStr
     assert(logMsgFun(timestamp_1, "Application is running.") == s"[$timestamp_1] [DEBUG] [MyApp] - Application is running.")
